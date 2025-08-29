@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <title>SABER — ECG Live</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root{
+      --bg: #ffffff;
+      --ink: #0f172a;
+      --muted: #64748b;
+      --border: #e5eaf0;
+      --brand: #0ea5e9;
+      --led-off: #cbd5e1;
+      --led-on: #10b981;
+    }
+    body { margin:0; background:var(--bg); color:var(--ink);
+           font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif; }
+    header {
+      display:flex; gap:14px; align-items:center;
+      padding:14px 16px; border-bottom:1px solid var(--border);
+      background:#fff; position:sticky; top:0; z-index:10;
+    }
+    .brand { font-weight:900; letter-spacing:.06em; color:var(--brand); }
+    .title { font-weight:700; color:var(--ink); opacity:.9; }
+    #status-led { width:10px; height:10px; border-radius:50%;
+      background:var(--led-off); border:2px solid #fff; box-shadow:0 0 0 1px #cbd5e1 inset;
+      transition:background .15s; }
+    #status-led.on { background:var(--led-on); }
+
+    .spacer { flex:1; }
+    .btn {
+      background:#164bc6; color:#fff; border:1px solid #0f172a;
+      padding:8px 12px; border-radius:8px; cursor:pointer; font-weight:600;
+    }
+    .btn:hover { filter:brightness(0.95); }
+
+    main { padding:16px; }
+    /* Largura total do container; o JS ajusta o bitmap p/ não perder nitidez */
+    canvas {
+      display:block;
+      width:100%;          /* ocupa 100% do main */
+      height:360px;        /* altura visual; o JS usa esta altura */
+      border:1px solid var(--border);
+      border-radius:10px; background:#fff; margin-top:8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">SABER</div>
+    <div id="status-led" title="recebendo frames"></div>
+    <div class="title">ECG Live</div>
+    <div class="spacer"></div>
+    <button id="btn-go" class="btn" title="Enviar GO">GO</button>
+    <button id="btn-stop" class="btn" title="Enviar STOP">STOP</button>
+  </header>
+
+  <main>
+    <!-- width/height “iniciais”; o JS redimensiona para o tamanho real do CSS -->
+    <canvas id="ecgCanvas" width="1200" height="360"></canvas>
+  </main>
+
+  <script src="/static/js/ecg.js?v=12"></script>
+  <script src="/static/js/live.js?v=11"></script>
+  <script src="/static/js/app.js?v=11"></script>
+</body>
+</html>

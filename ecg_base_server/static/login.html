@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login — S.A.B.E.R.</title>
+  <style>
+    :root { color-scheme: light dark; }
+    * { box-sizing: border-box; }
+
+    /* Fundo azul, mais próximo do painel de login */
+    body{
+      margin:0; min-height:100vh; display:grid; place-items:center;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Arial;
+      background: linear-gradient(180deg, #cfe8ff, #a7c8ff);
+    }
+
+    /* Bloco branco dividido em 2 colunas */
+    .shell{
+      width:min(100%, 980px);
+      background:#fff; border-radius:18px; overflow:hidden;
+      box-shadow:0 12px 40px rgba(2,6,23,.15);
+      display:grid; grid-template-columns:1.05fr 1fr;
+    }
+
+    /* ESQUERDA: login centralizado dentro do bloco */
+    .left{
+      background: linear-gradient(160deg, #0ea5e9, #2563eb);
+      color:#fff; display:grid; place-items:center; padding:24px;
+    }
+    .form{ width:100%; max-width:340px; }
+    .welcome{ font-size:22px; font-weight:800; letter-spacing:.08em; margin-bottom:18px; text-align:center; }
+    .field{
+      margin:12px 0; padding:12px 16px; border-radius:999px;
+      background:rgba(255,255,255,.92); border:1px solid rgba(255,255,255,.6);
+      display:flex; align-items:center; gap:8px; color:#0f172a;
+    }
+    .field input{ border:0; outline:0; background:transparent; width:100%; font-size:14px; color:#0f172a; }
+    .btn{
+      width:100%; margin-top:14px; padding:12px 16px; border-radius:999px; border:0; cursor:pointer;
+      font-weight:700; letter-spacing:.06em; color:#fff;
+      background:linear-gradient(90deg, #10b981, #22c55e);
+      box-shadow:0 8px 20px rgba(16,185,129,.35);
+    }
+    .err{ min-height:18px; font-size:12px; color:#ffd1d1; margin-top:10px; text-align:center; }
+
+    /* DIREITA: conteúdo centralizado + ECG quadrado sem borda */
+    .right{
+      background:#fff; padding:28px;
+      display:grid; place-items:center; /* centraliza conteúdo relativo ao bloco branco */
+    }
+    .rightInner{ width:100%; max-width:420px; text-align:center; }
+    .title{ font-weight:800; font-size:22px; color:#0f172a; margin-bottom:6px; }
+    .desc{ font-size:13px; color:#475569; line-height:1.4; }
+
+    .ecgWrap{ margin-top:18px; display:grid; place-items:center; }
+    /* caixa quadrada para o canvas */
+    .squareBox{ width:min(85%, 320px); aspect-ratio:1/1; position:relative; }
+    .squareBox canvas{ width:100%; height:100%; display:block; } /* sem borda, tudo branco */
+    
+    @media (max-width:880px){ .shell{ grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <!-- LEFT: LOGIN -->
+    <section class="left">
+      <div class="form">
+        <div class="welcome">WELCOME</div>
+        <div class="field">
+          <svg width="16" height="16" viewBox="0 0 24 24"><path fill="#0f172a" d="M12 12q-1.65 0-2.825-1.175T8 8q0-1.65 1.175-2.825T12 4q1.65 0 2.825 1.175T16 8q0 1.65-1.175 2.825T12 12m0 2q2.5 0 4.25 1.75T18 20H6q0-2.5 1.75-4.25T12 14"/></svg>
+          <input id="username" placeholder="Username" autocomplete="username" />
+        </div>
+        <div class="field">
+          <svg width="16" height="16" viewBox="0 0 24 24"><path fill="#0f172a" d="M12 17q.425 0 .713-.288T13 16t-.288-.712T12 15t-.712.288T11 16t.288.713T12 17m-6 3q-.825 0-1.412-.587T4 18V9q0-.825.588-1.412T6 7h1q0-2.075 1.463-3.537T12 2t3.538 1.463T17 7h1q.825 0 1.413.588T20 9v9q0 .825-.587 1.413T18 20zm2-2h8q.425 0 .713-.288T17 17v-8q0-.425-.288-.712T16 8h-1V7q0-1.25-.875-2.125T12 4t-2.125.875T9 7v1H8q-.425 0-.712.288T7 9v8q0 .425.288.713T8 18"/></svg>
+          <input id="password" type="password" placeholder="Password" autocomplete="current-password" />
+        </div>
+        <button id="loginBtn" class="btn">SUBMIT</button>
+        <div id="error" class="err"></div>
+      </div>
+    </section>
+
+    <!-- RIGHT: título/descrição centralizados + ECG quadrado -->
+    <section class="right">
+      <div class="rightInner">
+        <div class="title">S.A.B.E.R. – Secure AI-Based Encrypted ECG Rhythm-monitoring</div>
+        <div class="desc">Real-time ECG collection, decryption, and visualization.</div>
+
+        <div class="ecgWrap">
+          <div class="squareBox">
+            <canvas id="ecg"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // Login via JSON → /api/login
+    const $ = (id) => document.getElementById(id);
+    $("loginBtn").onclick = async () => {
+      $("error").textContent = "";
+      const payload = { username: $("username").value.trim(), password: $("password").value.trim() };
+      try {
+        const res = await fetch("/api/login", { method:"POST", headers:{ "Content-Type":"application/json" }, body: JSON.stringify(payload) });
+        if (res.ok) window.location.href = "/app";
+        else { const j = await res.json().catch(()=>({})); $("error").textContent = j.error || "Login failed"; }
+      } catch { $("error").textContent = "Network error"; }
+    };
+    document.addEventListener("keydown",(e)=>{ if(e.key==="Enter")$("loginBtn").click(); });
+
+    // ECG animado: quadrado, linha mais grossa, ~2 picos visíveis
+    (function(){
+      const box = document.querySelector(".squareBox");
+      const c = document.getElementById("ecg");
+      const ctx = c.getContext("2d");
+
+      let HR = 72;                 // bpm
+      let VISIBLE_PEAKS = 2;       // manter ~2 picos
+      let PX_PER_SEC = 100;        // ajustado no resize
+      let BUFFER = 300;            // nº de pontos (1 por px)
+
+      let points = new Array(BUFFER).fill(0);
+      let t = 0, last = performance.now();
+
+      const ga=(x,mu,s)=>Math.exp(-0.5*((x-mu)/s)**2);
+      function ecg(ph){
+        return 0.15*ga(ph,0.20,0.03)   // P
+             - 0.35*ga(ph,0.495,0.012)// Q
+             + 1.30*ga(ph,0.50,0.010) // R
+             - 0.55*ga(ph,0.515,0.014)// S
+             + 0.35*ga(ph,0.75,0.04)  // T
+             + 0.01*Math.sin(ph*2*Math.PI*2.5);
+      }
+
+      function resize(){
+        // dimensiona o canvas para preencher a caixa quadrada
+        const dpr = window.devicePixelRatio || 1;
+        const w = box.clientWidth, h = box.clientHeight;
+        c.width = Math.floor(w*dpr); c.height = Math.floor(h*dpr);
+        ctx.setTransform(dpr,0,0,dpr,0,0);
+
+        // manter ~2 picos visíveis independente do tamanho
+        const period = 60/HR;
+        PX_PER_SEC = w / (VISIBLE_PEAKS * period);
+        BUFFER = Math.floor(w);
+        points = new Array(Math.max(1, BUFFER)).fill(0);
+      }
+
+      function draw(){
+        const w = c.width/(window.devicePixelRatio||1);
+        const h = c.height/(window.devicePixelRatio||1);
+        const mid = h*0.6, k = h*0.40;  // mais vertical para ressaltar picos
+        ctx.clearRect(0,0,w,h);
+        ctx.beginPath();
+        ctx.moveTo(0, mid - points[0]*k);
+        for(let x=1;x<points.length;x++){ ctx.lineTo(x, mid - points[x]*k); }
+        ctx.strokeStyle = "#0ea5e9"; ctx.lineWidth = 3.5; // linha mais grossa
+        ctx.stroke();
+      }
+
+      function tick(now){
+        const dt = Math.min(0.05, (now-last)/1000); last = now;
+        const period = 60/HR;
+        const adv = PX_PER_SEC * dt;
+        for(let i=0;i<adv;i++){
+          const ph = (t % period)/period;
+          const s = ecg(ph) + (Math.random()-0.5)*0.012;
+          points.push(s); if(points.length>BUFFER) points.shift();
+          t += 1/PX_PER_SEC;
+        }
+        draw();
+        requestAnimationFrame(tick);
+      }
+
+      window.addEventListener("resize", resize);
+      resize(); requestAnimationFrame(tick);
+    })();
+  </script>
+</body>
+</html>

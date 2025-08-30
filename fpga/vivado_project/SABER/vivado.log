@@ -1,0 +1,51 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Fri Aug 29 15:46:15 2025
+# Process ID         : 33364
+# Current directory  : C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent19872 C:\Users\cncai\Desktop\EMSE\AMD\Final_Files\SABER\SABER.xpr
+# Log file           : C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/vivado.log
+# Journal file       : C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER\vivado.jou
+# Running On         : LAPTOP-TDIUQR79
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+# CPU Frequency      : 2419 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 21243 MB
+# Swap memory        : 21243 MB
+# Total Virtual      : 42486 MB
+# Available Virtual  : 17480 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at D:/Programas/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at D:/Programas/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at D:/Programas/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IPs/encryptor_system'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IPs/reg_v3'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IPs/ADC_8_bits'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programas/Vivado/2024.2/data/ip'.
+INFO: [Project 1-5579] Found utility IPs instantiated in one or more block designs which have equivalent inline hdl with improved performance and reduced diskspace. It is recommended to migrate these utility IPs to inline hdl using the command upgrade_project -migrate_to_inline_hdl. The utility IPs may be deprecated in future releases. More information on inline hdl is available in UG994.
+open_project: Time (s): cpu = 00:00:54 ; elapsed = 00:00:25 . Memory (MB): peak = 1444.613 ; gain = 333.500
+open_bd_design {C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.srcs/sources_1/bd/SABER/SABER.bd}
+Reading block design file <C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.srcs/sources_1/bd/SABER/SABER.bd>...
+Adding component instance block -- xilinx.com:user:wifi_pack_reg:1.0 - wifi_pack_reg_0
+Adding component instance block -- xilinx.com:user:ADC_8_bits:2.0 - ADC_8_bits_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
+Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - axi_smc
+Adding component instance block -- xilinx.com:user:encryptor_system:2.0 - encryptor_system_0
+Successfully read diagram <SABER> from block design file <C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.srcs/sources_1/bd/SABER/SABER.bd>
+open_bd_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 1607.977 ; gain = 142.301
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 29 15:50:25 2025...

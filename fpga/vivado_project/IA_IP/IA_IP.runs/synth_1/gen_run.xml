@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1756285329">
+  <File Type="PA-TCL" Name="mlp_top_stdzdense1.tcl"/>
+  <File Type="REPORTS-TCL" Name="mlp_top_stdzdense1_reports.tcl"/>
+  <File Type="RDS-RDS" Name="mlp_top_stdzdense1.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="mlp_top_stdzdense1_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="mlp_top_stdzdense1_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="mlp_top_stdzdense1_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="mlp_top_stdzdense1.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="mlp_top_stdzdense1_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="mlp_top_stdzdense1_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/dense1_181x64_relu.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/stdz_181.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/mlp_top_stdzdense1.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/ml_export/b1.mem">
+      <FileInfo SFType="MIF">
+        <Attr Name="ImportPath" Val="$PPRDIR/../ml_export/b1.mem"/>
+        <Attr Name="ImportTime" Val="1756215898"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/ml_export/b3.mem">
+      <FileInfo SFType="MIF">
+        <Attr Name="ImportPath" Val="$PPRDIR/../ml_export/b3.mem"/>
+        <Attr Name="ImportTime" Val="1756215902"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/ml_export/W3.mem">
+      <FileInfo SFType="MIF">
+        <Attr Name="ImportPath" Val="$PPRDIR/../ml_export/W3.mem"/>
+        <Attr Name="ImportTime" Val="1756215894"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/ml_export/b2.mem">
+      <FileInfo SFType="MIF">
+        <Attr Name="ImportPath" Val="$PPRDIR/../ml_export/b2.mem"/>
+        <Attr Name="ImportTime" Val="1756215900"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/ml_export/bi_q14.mem">
+      <FileInfo SFType="MIF">
+        <Attr Name="ImportPath" Val="$PPRDIR/../ml_export/bi_q14.mem"/>
+        <Attr Name="ImportTime" Val="1756215904"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/ml_export/W1.mem">
+      <FileInfo SFType="MIF">
+        <Attr Name="ImportPath" Val="$PPRDIR/../ml_export/W1.mem"/>
+        <Attr Name="ImportTime" Val="1756215889"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/ml_export/W2.mem">
+      <FileInfo SFType="MIF">
+        <Attr Name="ImportPath" Val="$PPRDIR/../ml_export/W2.mem"/>
+        <Attr Name="ImportTime" Val="1756215891"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/ml_export/sigmoid_q15.mem">
+      <FileInfo SFType="MIF">
+        <Attr Name="ImportPath" Val="$PPRDIR/../ml_export/sigmoid_q15.mem"/>
+        <Attr Name="ImportTime" Val="1756215932"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/ml_export/ai_q14.mem">
+      <FileInfo SFType="MIF">
+        <Attr Name="ImportPath" Val="$PPRDIR/../ml_export/ai_q14.mem"/>
+        <Attr Name="ImportTime" Val="1756215896"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="mlp_top_stdzdense1"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

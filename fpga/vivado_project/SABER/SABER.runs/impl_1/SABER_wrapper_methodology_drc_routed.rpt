@@ -1,0 +1,105 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Thu Aug 21 20:54:35 2025
+| Host         : LAPTOP-TDIUQR79 running 64-bit major release  (build 9200)
+| Command      : report_methodology -file SABER_wrapper_methodology_drc_routed.rpt -pb SABER_wrapper_methodology_drc_routed.pb -rpx SABER_wrapper_methodology_drc_routed.rpx
+| Design       : SABER_wrapper
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max checks: <unlimited>
+             Checks found: 7
++-----------+------------------+-----------------------------------------------------------+--------+
+| Rule      | Severity         | Description                                               | Checks |
++-----------+------------------+-----------------------------------------------------------+--------+
+| TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree        | 1      |
+| TIMING-6  | Critical Warning | No common primary clock between related clocks            | 1      |
+| TIMING-7  | Critical Warning | No common node between related clocks                     | 1      |
+| TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin                 | 1      |
+| TIMING-51 | Critical Warning | No common phase between related clocks from parallel CMBs | 1      |
+| LUTAR-1   | Warning          | LUT drives async reset alert                              | 2      |
++-----------+------------------+-----------------------------------------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-4#1 Critical Warning
+Invalid primary clock redefinition on a clock tree  
+Invalid clock redefinition on a clock tree. The primary clock SABER_i/ADC_8_bits_0/inst/clk_wiz_0/inst/clk_in1 is defined downstream of clock clk_fpga_0 and overrides its insertion delay and/or waveform definition
+Related violations: <none>
+
+TIMING-6#1 Critical Warning
+No common primary clock between related clocks  
+The clocks clk_out1_ADC_8_bits_clk_wiz_0_0 and clk_fpga_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_ADC_8_bits_clk_wiz_0_0] -to [get_clocks clk_fpga_0]
+Related violations: <none>
+
+TIMING-7#1 Critical Warning
+No common node between related clocks  
+The clocks clk_out1_ADC_8_bits_clk_wiz_0_0 and clk_fpga_0 are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_ADC_8_bits_clk_wiz_0_0] -to [get_clocks clk_fpga_0]
+Related violations: <none>
+
+TIMING-27#1 Critical Warning
+Invalid primary clock on hierarchical pin  
+A primary clock SABER_i/ADC_8_bits_0/inst/clk_wiz_0/inst/clk_in1 is created on an inappropriate internal pin SABER_i/ADC_8_bits_0/inst/clk_wiz_0/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
+Related violations: <none>
+
+TIMING-51#1 Critical Warning
+No common phase between related clocks from parallel CMBs  
+The clocks clk_out1_ADC_8_bits_clk_wiz_0_0 and clk_fpga_0 are timed together but have no phase relationship. The design could fail in hardware. The clocks originate from two parallel Clock Modifying Blocks and at least one of the MMCM or PLLs clock dividers is not set to 1. To be safely timed, all MMCMs or PLLs involved in parallel clocking must have the clock divider set to 1.
+Related violations: <none>
+
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell SABER_i/encryptor_system_0/inst/fsm_SABER_0/total_cnt[7]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) SABER_i/encryptor_system_0/inst/nonce_reg_0/data_o_reg[87]/CLR,
+SABER_i/encryptor_system_0/inst/nonce_reg_0/data_o_reg[88]/CLR,
+SABER_i/encryptor_system_0/inst/nonce_reg_0/data_o_reg[89]/CLR,
+SABER_i/encryptor_system_0/inst/nonce_reg_0/data_o_reg[8]/CLR,
+SABER_i/encryptor_system_0/inst/nonce_reg_0/data_o_reg[90]/CLR,
+SABER_i/encryptor_system_0/inst/nonce_reg_0/data_o_reg[91]/CLR,
+SABER_i/encryptor_system_0/inst/nonce_reg_0/data_o_reg[92]/CLR,
+SABER_i/encryptor_system_0/inst/nonce_reg_0/data_o_reg[93]/CLR,
+SABER_i/encryptor_system_0/inst/nonce_reg_0/data_o_reg[94]/CLR,
+SABER_i/encryptor_system_0/inst/nonce_reg_0/data_o_reg[95]/CLR,
+SABER_i/encryptor_system_0/inst/nonce_reg_0/data_o_reg[96]/CLR,
+SABER_i/encryptor_system_0/inst/nonce_reg_0/data_o_reg[97]/CLR,
+SABER_i/encryptor_system_0/inst/nonce_reg_0/data_o_reg[98]/CLR,
+SABER_i/encryptor_system_0/inst/nonce_reg_0/data_o_reg[99]/CLR,
+SABER_i/encryptor_system_0/inst/nonce_reg_0/data_o_reg[9]/CLR
+ (the first 15 of 389 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell SABER_i/encryptor_system_0/inst/fsm_SABER_0/words[55][31]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) SABER_i/encryptor_system_0/inst/cipher_reg_0/words_reg[9][25]/CLR,
+SABER_i/encryptor_system_0/inst/cipher_reg_0/words_reg[9][26]/CLR,
+SABER_i/encryptor_system_0/inst/cipher_reg_0/words_reg[9][27]/CLR,
+SABER_i/encryptor_system_0/inst/cipher_reg_0/words_reg[9][28]/CLR,
+SABER_i/encryptor_system_0/inst/cipher_reg_0/words_reg[9][29]/CLR,
+SABER_i/encryptor_system_0/inst/cipher_reg_0/words_reg[9][2]/CLR,
+SABER_i/encryptor_system_0/inst/cipher_reg_0/words_reg[9][30]/CLR,
+SABER_i/encryptor_system_0/inst/cipher_reg_0/words_reg[9][31]/CLR,
+SABER_i/encryptor_system_0/inst/cipher_reg_0/words_reg[9][3]/CLR,
+SABER_i/encryptor_system_0/inst/cipher_reg_0/words_reg[9][4]/CLR,
+SABER_i/encryptor_system_0/inst/cipher_reg_0/words_reg[9][5]/CLR,
+SABER_i/encryptor_system_0/inst/cipher_reg_0/words_reg[9][6]/CLR,
+SABER_i/encryptor_system_0/inst/cipher_reg_0/words_reg[9][7]/CLR,
+SABER_i/encryptor_system_0/inst/cipher_reg_0/words_reg[9][8]/CLR,
+SABER_i/encryptor_system_0/inst/cipher_reg_0/words_reg[9][9]/CLR
+ (the first 15 of 1739 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+

@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"ADC_8_bits": {
+			"proto_instances": {
+			}
+		}
+	}
+}

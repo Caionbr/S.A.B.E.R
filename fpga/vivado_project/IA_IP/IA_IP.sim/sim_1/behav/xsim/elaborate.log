@@ -1,0 +1,23 @@
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Programas/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_mlp_pipeline_top_behav xil_defaultlib.tb_mlp_pipeline_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pre_block_u8_to_s8
+Compiling module xil_defaultlib.dense_mac1_generic
+Compiling module xil_defaultlib.dense_stage1
+Compiling module xil_defaultlib.dense_mac1_generic(IN_DIM=64,OUT...
+Compiling module xil_defaultlib.dense_stage2
+Compiling module xil_defaultlib.dense_mac1_generic(IN_DIM=32,OUT...
+Compiling module xil_defaultlib.dense_stage3
+Compiling module xil_defaultlib.mlp_pipeline_top
+Compiling module xil_defaultlib.tb_mlp_pipeline_top
+WARNING: [XSIM 43-3373] "C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sim_1/new/tb_mlp_pipeline_top.sv" Line 122. System function $sscanf is used as system task. This system function should have a LHS e.g. x=$sscanf().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_mlp_pipeline_top_behav

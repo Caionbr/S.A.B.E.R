@@ -1,0 +1,5 @@
+Time resolution is 1 ps
+[CHK] D1 W[0]=0xfd B[0]=0xc0
+[CHK] D2 W[0]=0xe8 B[0]=0x27
+[CHK] D3 W[0]=0x9d B[0]=0xffffffcf
+INFO: xsimkernel Simulation Memory Usage: 39288 KB (Peak: 39288 KB), Simulation CPU Usage: 14343 ms

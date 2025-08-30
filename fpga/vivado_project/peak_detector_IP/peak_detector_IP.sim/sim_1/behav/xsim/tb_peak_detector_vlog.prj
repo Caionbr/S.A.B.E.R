@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../peak_detector_IP.srcs/sources_1/new/peak_detector.sv" \
+"../../../../peak_detector_IP.srcs/sim_1/new/peak_detector_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_mlp_batch_behav/xsimk.exe -simmode gui -wdb tb_mlp_batch_behav.wdb -simrunnum 0 -socket 53352
+Design successfully loaded
+Design Loading Memory Usage: 29300 KB (Peak: 29300 KB)
+Design Loading CPU Usage: 984 ms
+Simulation completed
+Simulation Memory Usage: 75152 KB (Peak: 75152 KB)
+Simulation CPU Usage: 169046 ms

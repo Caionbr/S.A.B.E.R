@@ -1,0 +1,936 @@
+
+*** Running vivado
+    with args -log mlp_top_stdzdense1.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source mlp_top_stdzdense1.tcl
+
+
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Wed Aug 27 11:02:14 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source mlp_top_stdzdense1.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IPs/dense1_181x64'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IPs/stdz_181'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programas/Vivado/2024.2/data/ip'.
+Command: synth_design -top mlp_top_stdzdense1 -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 31272
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 933.863 ; gain = 476.320
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-10180] variable 'b_q14' must explicitly be declared as automatic or static [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:84]
+WARNING: [Synth 8-10180] variable 's' must explicitly be declared as automatic or static [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:85]
+WARNING: [Synth 8-10180] variable 'idx' must explicitly be declared as automatic or static [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:89]
+WARNING: [Synth 8-10180] variable 'prod' must explicitly be declared as automatic or static [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:90]
+WARNING: [Synth 8-10180] variable 'mul' must explicitly be declared as automatic or static [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:117]
+WARNING: [Synth 8-10180] variable 'shr' must explicitly be declared as automatic or static [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:118]
+WARNING: [Synth 8-10180] variable 'q14' must explicitly be declared as automatic or static [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+INFO: [Synth 8-6157] synthesizing module 'mlp_top_stdzdense1' [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/mlp_top_stdzdense1.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'stdz_181' [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/stdz_181.sv:5]
+	Parameter N bound to: 32'sb00000000000000000000000010110101 
+INFO: [Synth 8-3876] $readmem data file 'ai_q14.mem' is read successfully [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/stdz_181.sv:23]
+INFO: [Synth 8-3876] $readmem data file 'bi_q14.mem' is read successfully [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/stdz_181.sv:24]
+INFO: [Synth 8-6155] done synthesizing module 'stdz_181' (0#1) [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/stdz_181.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'dense1_181x64_relu' [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:25]
+	Parameter N_IN bound to: 32'sb00000000000000000000000010110101 
+	Parameter N_OUT bound to: 32'sb00000000000000000000000001000000 
+	Parameter W1_DEQ_Q14 bound to: 194 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'W1.mem' is read successfully [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:47]
+INFO: [Synth 8-3876] $readmem data file 'b1.mem' is read successfully [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:48]
+INFO: [Synth 8-6155] done synthesizing module 'dense1_181x64_relu' (0#1) [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:25]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_top_stdzdense1' (0#1) [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/mlp_top_stdzdense1.sv:5]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[0] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[1] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[2] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[3] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[4] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[5] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[6] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[7] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[8] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[9] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[10] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[11] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[12] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[13] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[14] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[15] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[16] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[17] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[18] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[19] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[20] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[21] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[22] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[23] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[24] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[25] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[26] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[27] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[28] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[29] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[30] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[31] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[32] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[33] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[34] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[35] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[36] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[37] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[38] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[39] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[40] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[41] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[42] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[43] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[44] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[45] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[46] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[47] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[48] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[49] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[50] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[51] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[52] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[53] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[54] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[55] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[56] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[57] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[58] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[59] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[60] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[61] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[62] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[63] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[64] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[65] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[66] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[67] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[68] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[69] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[70] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[71] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[72] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[73] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[74] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[75] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[76] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[77] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[78] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[79] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[80] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[81] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[82] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[83] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[84] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[85] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[86] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[87] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[88] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[89] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[90] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[91] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[92] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[93] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[94] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[95] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[96] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[97] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[98] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+WARNING: [Synth 8-6014] Unused sequential element x_q14_r_reg[99] was removed.  [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:66]
+INFO: [Common 17-14] Message 'Synth 8-6014' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3848] Net (null)[0].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[1].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[2].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[3].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[4].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[5].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[6].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[7].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[8].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[9].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[10].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[11].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[12].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[13].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[14].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[15].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[16].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[17].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[18].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[19].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[20].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[21].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[22].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[23].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[24].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[25].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[26].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[27].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[28].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[29].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[30].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[31].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[32].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[33].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[34].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[35].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[36].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[37].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[38].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[39].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[40].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[41].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[42].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[43].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[44].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[45].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[46].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[47].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[48].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[49].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[50].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[51].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[52].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[53].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[54].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[55].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[56].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[57].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[58].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[59].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[60].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[61].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[62].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-3848] Net (null)[63].q14 in module/entity dense1_181x64_relu does not have driver. [C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.srcs/sources_1/new/dense1_181x64_relu.sv:119]
+WARNING: [Synth 8-7129] Port data_i[2895] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2894] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2893] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2892] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2891] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2890] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2889] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2888] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2887] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2886] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2885] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2884] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2883] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2882] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2881] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2880] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2879] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2878] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2877] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2876] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2875] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2874] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2873] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2872] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2871] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2870] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2869] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2868] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2867] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2866] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2865] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2864] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2863] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2862] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2861] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2860] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2859] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2858] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2857] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2856] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2855] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2854] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2853] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2852] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2851] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2850] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2849] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2848] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2847] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2846] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2845] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2844] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2843] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2842] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2841] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2840] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2839] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2838] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2837] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2836] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2835] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2834] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2833] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2832] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2831] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2830] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2829] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2828] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2827] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2826] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2825] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2824] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2823] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2822] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2821] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2820] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2819] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2818] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2817] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2816] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2815] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2814] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2813] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2812] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2811] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2810] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2809] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2808] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2807] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2806] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2805] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2804] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2803] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2802] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2801] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2800] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2799] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2798] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2797] in module dense1_181x64_relu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_i[2796] in module dense1_181x64_relu is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1214.535 ; gain = 756.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1214.535 ; gain = 756.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1214.535 ; gain = 756.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:20 . Memory (MB): peak = 1214.535 ; gain = 756.992
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 245   
+	                8 Bit    Registers := 181   
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input   16 Bit        Muxes := 490   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffd28e)+(A:0x2a1)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xfffffffff546)+(A:0x26a)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xfffffffffbc1)+(A:0x256)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffce23)+(A:0x2ad)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0x59)+(A:0x24a)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffce13)+(A:0x2ae)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffd030)+(A:0x2ac)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xfffffffff513)+(A:0x264)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0x5e4)+(A:0x23a)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xc34)+(A:0x229)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0x12d7)+(A:0x217)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0x18cf)+(A:0x205)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xfffffffff351)+(A:0x268)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xfffffffff252)+(A:0x26b)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffdeed)+(A:0x28b)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffdb53)+(A:0x298)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffdd42)+(A:0x295)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffe6e3)+(A:0x289)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffe142)+(A:0x28e)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffe99e)+(A:0x288)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffecb6)+(A:0x278)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xfffffffff3bd)+(A:0x26f)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffeaa9)+(A:0x287)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0x22e0)+(A:0x21b)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffeba2)+(A:0x286)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0x23cf)+(A:0x21f)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0x25bf)+(A:0x21d)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0x28aa)+(A:0x219)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0x2c54)+(A:0x213)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0x3068)+(A:0x20c)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0x346b)+(A:0x204)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffe341)+(A:0x28a)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffe446)+(A:0x289)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xfffffffff200)+(A:0x278)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xfffffffff26a)+(A:0x275)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xfffffffff2e2)+(A:0x273)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0x24cf)+(A:0x211)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0x2651)+(A:0x20b)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0x27f2)+(A:0x205)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffd939)+(A:0x29c)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffdbe6)+(A:0x28e)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffd495)+(A:0x2a4)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xfffffffff808)+(A:0x261)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xfffffffff167)+(A:0x27a)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0x22e4)+(A:0x21e)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0x2393)+(A:0x217)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffe247)+(A:0x28c)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xfffffffff5f4)+(A:0x262)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffcfe0)+(A:0x2a8)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffd125)+(A:0x2a5)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffcec4)+(A:0x2ab)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffd3cf)+(A:0x29e)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffd4e9)+(A:0x29b)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffd5de)+(A:0x298)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffd6f4)+(A:0x296)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffcebf)+(A:0x2ae)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffd821)+(A:0x293)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffd954)+(A:0x291)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffd233)+(A:0x2a8)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffda8e)+(A:0x290)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffdd60)+(A:0x28c)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffd709)+(A:0x2a0)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffe061)+(A:0x28a)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffe1b8)+(A:0x289)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffe302)+(A:0x289)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffe425)+(A:0x289)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffe53e)+(A:0x289)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffdee7)+(A:0x292)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffe03c)+(A:0x290)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffe61b)+(A:0x289)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffe7b7)+(A:0x289)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffe89f)+(A:0x289)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffeca0)+(A:0x285)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffed8d)+(A:0x284)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffee62)+(A:0x282)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffef2c)+(A:0x281)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffe56b)+(A:0x286)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffe69d)+(A:0x284)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffefe7)+(A:0x27f)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffe7e9)+(A:0x282)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffe920)+(A:0x27f)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xfffffffff0a3)+(A:0x27d)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffea60)+(A:0x27d)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffeb92)+(A:0x27a)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffedca)+(A:0x275)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xffffffffeee8)+(A:0x273)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xfffffffff012)+(A:0x270)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xfffffffff13d)+(A:0x26d)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+DSP Report: Generating DSP p_1_out0, operation Mode is: (C:0xfffffffff43a)+(A:0x266)*B.
+DSP Report: operator p_1_out0 is absorbed into DSP p_1_out0.
+DSP Report: operator p_0_in is absorbed into DSP p_1_out0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:31 . Memory (MB): peak = 1337.152 ; gain = 879.609
+---------------------------------------------------------------------------------
+ Sort Area is stdz_181__GB2 p_1_out0_2f : 0 0 : 305 305 : Used 1 time 0
+ Sort Area is stdz_181__GB0 p_1_out0_4 : 0 0 : 305 305 : Used 1 time 0
+ Sort Area is stdz_181__GB0 p_1_out0_c : 0 0 : 305 305 : Used 1 time 0
+ Sort Area is stdz_181__GB0 p_1_out0_11 : 0 0 : 285 285 : Used 1 time 0
+ Sort Area is stdz_181__GB0 p_1_out0_12 : 0 0 : 285 285 : Used 1 time 0
+ Sort Area is stdz_181__GB0 p_1_out0_1a : 0 0 : 285 285 : Used 1 time 0
+ Sort Area is stdz_181__GB0 p_1_out0_2 : 0 0 : 285 285 : Used 1 time 0
+ Sort Area is stdz_181__GB0 p_1_out0_26 : 0 0 : 285 285 : Used 1 time 0
+ Sort Area is stdz_181__GB0 p_1_out0_27 : 0 0 : 285 285 : Used 1 time 0
+ Sort Area is stdz_181__GB0 p_1_out0_28 : 0 0 : 285 285 : Used 1 time 0
+ Sort Area is stdz_181__GB2 p_1_out0_30 : 0 0 : 285 285 : Used 1 time 0
+ Sort Area is stdz_181__GB2 p_1_out0_34 : 0 0 : 285 285 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_56 : 0 0 : 285 285 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_5b : 0 0 : 285 285 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_5c : 0 0 : 285 285 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_5d : 0 0 : 285 285 : Used 1 time 0
+ Sort Area is stdz_181__GB0 p_1_out0_b : 0 0 : 285 285 : Used 1 time 0
+ Sort Area is stdz_181__GB0 p_1_out0_d : 0 0 : 285 285 : Used 1 time 0
+ Sort Area is stdz_181__GB0 p_1_out0_10 : 0 0 : 260 260 : Used 1 time 0
+ Sort Area is stdz_181__GB0 p_1_out0_16 : 0 0 : 260 260 : Used 1 time 0
+ Sort Area is stdz_181__GB0 p_1_out0_17 : 0 0 : 260 260 : Used 1 time 0
+ Sort Area is stdz_181__GB0 p_1_out0_18 : 0 0 : 260 260 : Used 1 time 0
+ Sort Area is stdz_181__GB0 p_1_out0_19 : 0 0 : 260 260 : Used 1 time 0
+ Sort Area is stdz_181__GB0 p_1_out0_1b : 0 0 : 260 260 : Used 1 time 0
+ Sort Area is stdz_181__GB0 p_1_out0_1d : 0 0 : 260 260 : Used 1 time 0
+ Sort Area is stdz_181__GB0 p_1_out0_24 : 0 0 : 260 260 : Used 1 time 0
+ Sort Area is stdz_181__GB0 p_1_out0_25 : 0 0 : 260 260 : Used 1 time 0
+ Sort Area is stdz_181__GB2 p_1_out0_33 : 0 0 : 260 260 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_43 : 0 0 : 260 260 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_44 : 0 0 : 260 260 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_45 : 0 0 : 260 260 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_46 : 0 0 : 260 260 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_47 : 0 0 : 260 260 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_49 : 0 0 : 260 260 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_4a : 0 0 : 260 260 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_4b : 0 0 : 260 260 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_4c : 0 0 : 260 260 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_4d : 0 0 : 260 260 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_4e : 0 0 : 260 260 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_4f : 0 0 : 260 260 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_50 : 0 0 : 260 260 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_51 : 0 0 : 260 260 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_52 : 0 0 : 260 260 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_53 : 0 0 : 260 260 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_54 : 0 0 : 260 260 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_55 : 0 0 : 260 260 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_57 : 0 0 : 260 260 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_58 : 0 0 : 260 260 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_59 : 0 0 : 260 260 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_5a : 0 0 : 260 260 : Used 1 time 0
+ Sort Area is stdz_181__GB0 p_1_out0_e : 0 0 : 260 260 : Used 1 time 0
+ Sort Area is stdz_181__GB0 p_1_out0_0 : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB0 p_1_out0_13 : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB0 p_1_out0_14 : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB0 p_1_out0_15 : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB0 p_1_out0_1c : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB0 p_1_out0_1e : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB0 p_1_out0_1f : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB0 p_1_out0_20 : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB0 p_1_out0_21 : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB0 p_1_out0_22 : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB0 p_1_out0_23 : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB1 p_1_out0_29 : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB1 p_1_out0_2a : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB1 p_1_out0_2b : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB1 p_1_out0_2c : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB1 p_1_out0_2d : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB1 p_1_out0_2e : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB2 p_1_out0_31 : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB2 p_1_out0_32 : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB2 p_1_out0_35 : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_36 : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_37 : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_38 : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_39 : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_3a : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_3b : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_3c : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_3d : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_3e : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_3f : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_40 : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_41 : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_42 : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB3 p_1_out0_48 : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB0 p_1_out0_6 : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB0 p_1_out0_9 : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB0 p_1_out0_a : 0 0 : 213 213 : Used 1 time 0
+ Sort Area is stdz_181__GB0 p_1_out0_7 : 0 0 : 205 205 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+--------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping                    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+--------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|stdz_181    | (C:0xffffffffd28e)+(A:0x2a1)*B | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xfffffffff546)+(A:0x26a)*B | 9      | 11     | 13     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xfffffffffbc1)+(A:0x256)*B | 9      | 11     | 12     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffce23)+(A:0x2ad)*B | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0x59)+(A:0x24a)*B           | 9      | 11     | 8      | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffce13)+(A:0x2ae)*B | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffd030)+(A:0x2ac)*B | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xfffffffff513)+(A:0x264)*B | 9      | 11     | 13     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0x5e4)+(A:0x23a)*B          | 9      | 11     | 12     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xc34)+(A:0x229)*B          | 9      | 11     | 13     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0x12d7)+(A:0x217)*B         | 9      | 11     | 14     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0x18cf)+(A:0x205)*B         | 9      | 11     | 14     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xfffffffff351)+(A:0x268)*B | 9      | 11     | 13     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xfffffffff252)+(A:0x26b)*B | 9      | 11     | 13     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffdeed)+(A:0x28b)*B | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffdb53)+(A:0x298)*B | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffdd42)+(A:0x295)*B | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffe6e3)+(A:0x289)*B | 9      | 11     | 14     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffe142)+(A:0x28e)*B | 9      | 11     | 14     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffe99e)+(A:0x288)*B | 9      | 11     | 14     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffecb6)+(A:0x278)*B | 9      | 11     | 14     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xfffffffff3bd)+(A:0x26f)*B | 9      | 11     | 13     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffeaa9)+(A:0x287)*B | 9      | 11     | 14     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0x22e0)+(A:0x21b)*B         | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffeba2)+(A:0x286)*B | 9      | 11     | 14     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0x23cf)+(A:0x21f)*B         | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0x25bf)+(A:0x21d)*B         | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0x28aa)+(A:0x219)*B         | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0x2c54)+(A:0x213)*B         | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0x3068)+(A:0x20c)*B         | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0x346b)+(A:0x204)*B         | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffe341)+(A:0x28a)*B | 9      | 11     | 14     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffe446)+(A:0x289)*B | 9      | 11     | 14     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xfffffffff200)+(A:0x278)*B | 9      | 11     | 13     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xfffffffff26a)+(A:0x275)*B | 9      | 11     | 13     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xfffffffff2e2)+(A:0x273)*B | 9      | 11     | 13     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0x24cf)+(A:0x211)*B         | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0x2651)+(A:0x20b)*B         | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0x27f2)+(A:0x205)*B         | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffd939)+(A:0x29c)*B | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffdbe6)+(A:0x28e)*B | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffd495)+(A:0x2a4)*B | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xfffffffff808)+(A:0x261)*B | 9      | 11     | 12     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xfffffffff167)+(A:0x27a)*B | 9      | 11     | 13     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0x22e4)+(A:0x21e)*B         | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0x2393)+(A:0x217)*B         | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffe247)+(A:0x28c)*B | 9      | 11     | 14     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xfffffffff5f4)+(A:0x262)*B | 9      | 11     | 13     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffcfe0)+(A:0x2a8)*B | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffd125)+(A:0x2a5)*B | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffcec4)+(A:0x2ab)*B | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffd3cf)+(A:0x29e)*B | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffd4e9)+(A:0x29b)*B | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffd5de)+(A:0x298)*B | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffd6f4)+(A:0x296)*B | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffcebf)+(A:0x2ae)*B | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffd821)+(A:0x293)*B | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffd954)+(A:0x291)*B | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffd233)+(A:0x2a8)*B | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffda8e)+(A:0x290)*B | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffdd60)+(A:0x28c)*B | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffd709)+(A:0x2a0)*B | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffe061)+(A:0x28a)*B | 9      | 11     | 14     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffe1b8)+(A:0x289)*B | 9      | 11     | 14     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffe302)+(A:0x289)*B | 9      | 11     | 14     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffe425)+(A:0x289)*B | 9      | 11     | 14     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffe53e)+(A:0x289)*B | 9      | 11     | 14     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffdee7)+(A:0x292)*B | 9      | 11     | 15     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffe03c)+(A:0x290)*B | 9      | 11     | 14     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffe61b)+(A:0x289)*B | 9      | 11     | 14     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffe7b7)+(A:0x289)*B | 9      | 11     | 14     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffe89f)+(A:0x289)*B | 9      | 11     | 14     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffeca0)+(A:0x285)*B | 9      | 11     | 14     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffed8d)+(A:0x284)*B | 9      | 11     | 14     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffee62)+(A:0x282)*B | 9      | 11     | 14     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffef2c)+(A:0x281)*B | 9      | 11     | 14     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffe56b)+(A:0x286)*B | 9      | 11     | 14     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffe69d)+(A:0x284)*B | 9      | 11     | 14     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffefe7)+(A:0x27f)*B | 9      | 11     | 14     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffe7e9)+(A:0x282)*B | 9      | 11     | 14     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffe920)+(A:0x27f)*B | 9      | 11     | 14     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xfffffffff0a3)+(A:0x27d)*B | 9      | 11     | 13     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffea60)+(A:0x27d)*B | 9      | 11     | 14     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffeb92)+(A:0x27a)*B | 9      | 11     | 14     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffedca)+(A:0x275)*B | 9      | 11     | 14     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xffffffffeee8)+(A:0x273)*B | 9      | 11     | 14     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xfffffffff012)+(A:0x270)*B | 9      | 11     | 13     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xfffffffff13d)+(A:0x26d)*B | 9      | 11     | 13     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|stdz_181    | (C:0xfffffffff43a)+(A:0x266)*B | 9      | 11     | 13     | -      | 26     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++------------+--------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 1350.953 ; gain = 893.410
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 1350.953 ; gain = 893.410
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:36 . Memory (MB): peak = 1514.969 ; gain = 1057.426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:36 . Memory (MB): peak = 1514.969 ; gain = 1057.426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:36 . Memory (MB): peak = 1514.969 ; gain = 1057.426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:36 . Memory (MB): peak = 1514.969 ; gain = 1057.426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:36 . Memory (MB): peak = 1514.969 ; gain = 1057.426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:36 . Memory (MB): peak = 1514.969 ; gain = 1057.426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |FDCE |     4|
+|3     |IBUF |     3|
+|4     |OBUF |  1025|
++------+-----+------+
+
+Report Instance Areas: 
++------+-----------+-------------------+------+
+|      |Instance   |Module             |Cells |
++------+-----------+-------------------+------+
+|1     |top        |                   |  1033|
+|2     |  u_dense1 |dense1_181x64_relu |     2|
+|3     |  u_stdz   |stdz_181           |     2|
++------+-----------+-------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:36 . Memory (MB): peak = 1514.969 ; gain = 1057.426
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 3149 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:36 . Memory (MB): peak = 1514.969 ; gain = 1057.426
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:36 . Memory (MB): peak = 1514.969 ; gain = 1057.426
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1528.055 ; gain = 0.000
+WARNING: [Netlist 29-101] Netlist 'mlp_top_stdzdense1' is not ideal for floorplanning, since the cellview 'mlp_top_stdzdense1' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1639.875 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 527f6c4c
+INFO: [Common 17-83] Releasing license: Synthesis
+26 Infos, 273 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1639.875 ; gain = 1184.359
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1639.875 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IA_IP/IA_IP.runs/synth_1/mlp_top_stdzdense1.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file mlp_top_stdzdense1_utilization_synth.rpt -pb mlp_top_stdzdense1_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Aug 27 11:03:06 2025...

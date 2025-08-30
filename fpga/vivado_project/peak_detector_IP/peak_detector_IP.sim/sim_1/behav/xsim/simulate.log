@@ -1,0 +1,6 @@
+Time resolution is 1 ps
+[2005000] peak_valid_o=1  data_i=0x47
+[3685000] frame_valid_o=1  frame_o[0]=0x07  frame_o[90]=0xff  frame_o[180]=0x11
+[5625000] peak_valid_o=1  data_i=0x47
+[7305000] frame_valid_o=1  frame_o[0]=0x06  frame_o[90]=0xff  frame_o[180]=0x11
+$finish called at time : 7495 ns : File "C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/peak_detector_IP/peak_detector_IP.srcs/sim_1/new/peak_detector_tb.sv" Line 88

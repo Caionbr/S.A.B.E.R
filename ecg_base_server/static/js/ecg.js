@@ -1,4 +1,4 @@
-// ecg.js — strip chart com opção de grid (desligado por padrão)
+// ecg.js — strip chart com “gravação” em páginas para relatório ao parar
 (() => {
   class ECGStrip {
     constructor(canvas, { showGrid = false } = {}) {
@@ -9,7 +9,8 @@
       this.w = 0; this.h = 0;
       this.x = 0; this.prevY = null;
 
-      this.showGrid = showGrid;      // << grid opcional
+      this.showGrid = showGrid;      // grade opcional (default: desligada)
+      this.pages = [];               // páginas gravadas (cada volta completa)
 
       this.colors = {
         bg: "#ffffff",
@@ -38,7 +39,7 @@
       ctx.fillStyle = colors.bg;
       ctx.fillRect(0, 0, w, h);
 
-      if (!this.showGrid) return;    // << sem linhas de grade
+      if (!this.showGrid) return;
 
       const big = 25, fine = 5;
       ctx.strokeStyle = colors.gridFine; ctx.lineWidth = 1;
@@ -55,6 +56,16 @@
       return Math.max(1, Math.min(this.h - 2, y));
     }
 
+    /** salva a página atual antes de limpar (usada no wrap e no STOP) */
+    _snapshotPage() {
+      const c = document.createElement("canvas");
+      c.width = this.canvas.width;
+      c.height = this.canvas.height;
+      const g = c.getContext("2d");
+      g.drawImage(this.canvas, 0, 0);
+      this.pages.push(c);
+    }
+
     pushSamples(arr) {
       const { ctx, w, h, colors } = this;
 
@@ -65,7 +76,7 @@
         ctx.fillStyle = colors.bg;
         ctx.fillRect(this.x, 0, 1, h);
 
-        // (se quiser grid, redesenha só a linha do grid nesta coluna)
+        // redesenha grade apenas se habilitada
         if (this.showGrid) {
           if (this.x % 25 === 0) {
             ctx.strokeStyle = colors.gridBold;
@@ -92,14 +103,26 @@
         this.prevY = y;
         this.x = (this.x + 1) % w;
 
-        // ao “voltar” ao início, zera e redesenha fundo
+        // Ao completar uma volta: salva página e recomeça “limpo”
         if (this.x === 0) {
+          this._snapshotPage();
           this._drawGridFull();
           this.prevY = null;
         }
       }
     }
 
+    /** páginas como dataURLs; includeCurrent inclui a tela parcial atual */
+    getReportImages(includeCurrent = true) {
+      const out = this.pages.map(c => c.toDataURL("image/png"));
+      if (includeCurrent) out.push(this.canvas.toDataURL("image/png"));
+      return out;
+    }
+
+    /** limpa só a gravação (para novo GO) */
+    resetRecording() { this.pages.length = 0; }
+
+    /** limpa a tela e reinicia o desenho do zero */
     clear() {
       this.prevY = null;
       this.x = 0;
@@ -110,7 +133,6 @@
   window.addEventListener("DOMContentLoaded", () => {
     const canvas = document.getElementById("ecgCanvas");
     if (!canvas) return;
-    // GRID DESLIGADO → só o traçado
-    window.ECG = new ECGStrip(canvas, { showGrid: false });
+    window.ECG = new ECGStrip(canvas, { showGrid: false }); // grid desligado
   });
 })();

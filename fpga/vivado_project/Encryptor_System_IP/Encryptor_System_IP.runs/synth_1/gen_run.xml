@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1755787136" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/encryptor_system.dcp">
+  <File Type="PA-TCL" Name="encryptor_system.tcl"/>
+  <File Type="REPORTS-TCL" Name="encryptor_system_reports.tcl"/>
+  <File Type="RDS-RDS" Name="encryptor_system.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="encryptor_system_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="encryptor_system_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="encryptor_system_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="encryptor_system.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="encryptor_system_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="encryptor_system_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/src/ascon_pack.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../IPs/encryptor_system/src/ascon_pack.sv"/>
+        <Attr Name="ImportTime" Val="1755703383"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/Pc.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../IPs/encryptor_system/src/Pc.sv"/>
+        <Attr Name="ImportTime" Val="1755703383"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/Permutation.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../IPs/encryptor_system/src/Permutation.sv"/>
+        <Attr Name="ImportTime" Val="1755703383"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/Pl.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../IPs/encryptor_system/src/Pl.sv"/>
+        <Attr Name="ImportTime" Val="1755703383"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/Ps.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../IPs/encryptor_system/src/Ps.sv"/>
+        <Attr Name="ImportTime" Val="1755703383"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/Sbox.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../IPs/encryptor_system/src/Sbox.sv"/>
+        <Attr Name="ImportTime" Val="1755703383"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/ad_reg.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../IPs/encryptor_system/src/ad_reg.sv"/>
+        <Attr Name="ImportTime" Val="1755728807"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/ascon.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../IPs/encryptor_system/src/ascon.sv"/>
+        <Attr Name="ImportTime" Val="1755728317"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/cipher_reg.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/compteur_double_init.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../IPs/encryptor_system/src/compteur_double_init.sv"/>
+        <Attr Name="ImportTime" Val="1755703383"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/counter_128.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../IPs/encryptor_system/src/counter_128.sv"/>
+        <Attr Name="ImportTime" Val="1755729032"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/data_reg.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../IPs/encryptor_system/src/data_reg.sv"/>
+        <Attr Name="ImportTime" Val="1755728718"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/drive_ascon.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../IPs/encryptor_system/src/drive_ascon.sv"/>
+        <Attr Name="ImportTime" Val="1755725908"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/fsm_SABER.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../IPs/encryptor_system/src/fsm_SABER.sv"/>
+        <Attr Name="ImportTime" Val="1755729631"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/fsm_moore.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../IPs/encryptor_system/src/fsm_moore.sv"/>
+        <Attr Name="ImportTime" Val="1755703383"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/key_reg.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../IPs/encryptor_system/src/key_reg.sv"/>
+        <Attr Name="ImportTime" Val="1755728863"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/lfsr_128.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../IPs/encryptor_system/src/lfsr_128.sv"/>
+        <Attr Name="ImportTime" Val="1755729048"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/mux_state.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../IPs/encryptor_system/src/mux_state.sv"/>
+        <Attr Name="ImportTime" Val="1755703383"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/nonce_gen.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../IPs/encryptor_system/src/nonce_gen.sv"/>
+        <Attr Name="ImportTime" Val="1755729063"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/nonce_reg.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../IPs/encryptor_system/src/nonce_reg.sv"/>
+        <Attr Name="ImportTime" Val="1755728894"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/register_w_en.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../IPs/encryptor_system/src/register_w_en.sv"/>
+        <Attr Name="ImportTime" Val="1755703383"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/state_register_w_en.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../IPs/encryptor_system/src/state_register_w_en.sv"/>
+        <Attr Name="ImportTime" Val="1755703383"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/xor_begin_perm.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../IPs/encryptor_system/src/xor_begin_perm.sv"/>
+        <Attr Name="ImportTime" Val="1755703383"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/xor_end_perm.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../IPs/encryptor_system/src/xor_end_perm.sv"/>
+        <Attr Name="ImportTime" Val="1755703383"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/encryptor_system.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../IPs/encryptor_system/src/encryptor_system.sv"/>
+        <Attr Name="ImportTime" Val="1755729843"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="encryptor_system"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/encryptor_system.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

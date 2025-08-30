@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Aug 27 10:37:41 2025" VIVADOVERSION="2024.2">
+
+  <SYSTEMINFO ARCH="virtex7" DEVICE="7vx485t" NAME="IA" PACKAGE="ffg1157" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clock_i_0" SIGIS="clk" SIGNAME="External_Ports_clock_i_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="stdz_181_0" PORT="clock_i"/>
+        <CONNECTION INSTANCE="dense1_181x64_relu_0" PORT="clock_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="1447" NAME="data_i_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_data_i_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="stdz_181_0" PORT="data_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="data_valid_i_0" SIGIS="undef" SIGNAME="External_Ports_data_valid_i_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="stdz_181_0" PORT="data_valid_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="out_valid_o_0" SIGIS="undef" SIGNAME="dense1_181x64_relu_0_out_valid_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="dense1_181x64_relu_0" PORT="out_valid_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="reset_i_0" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_reset_i_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="stdz_181_0" PORT="reset_i"/>
+        <CONNECTION INSTANCE="dense1_181x64_relu_0" PORT="reset_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="1023" NAME="y_o_0" RIGHT="0" SIGIS="undef" SIGNAME="dense1_181x64_relu_0_y_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="dense1_181x64_relu_0" PORT="y_o"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/dense1_181x64_relu_0" HWVERSION="1.2" INSTANCE="dense1_181x64_relu_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="dense1_181x64_relu" VLNV="xilinx.com:user:dense1_181x64_relu:1.2">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="N_IN" VALUE="181"/>
+        <PARAMETER NAME="N_OUT" VALUE="64"/>
+        <PARAMETER NAME="W1_DEQ_Q14" VALUE="0x00C2"/>
+        <PARAMETER NAME="Component_Name" VALUE="IA_dense1_181x64_relu_0_2"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clock_i" SIGIS="clk" SIGNAME="External_Ports_clock_i_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clock_i_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2895" NAME="data_i" RIGHT="0" SIGIS="undef" SIGNAME="stdz_181_0_data_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="stdz_181_0" PORT="data_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="data_valid_i" SIGIS="undef" SIGNAME="stdz_181_0_data_valid_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="stdz_181_0" PORT="data_valid_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_valid_o" SIGIS="undef" SIGNAME="dense1_181x64_relu_0_out_valid_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="out_valid_o_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset_i" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_reset_i_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset_i_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1023" NAME="y_o" RIGHT="0" SIGIS="undef" SIGNAME="dense1_181x64_relu_0_y_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="y_o_0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/stdz_181_0" HWVERSION="1.0" INSTANCE="stdz_181_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="stdz_181" VLNV="xilinx.com:user:stdz_181:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="N" VALUE="181"/>
+        <PARAMETER NAME="Component_Name" VALUE="IA_stdz_181_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clock_i" SIGIS="clk" SIGNAME="External_Ports_clock_i_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clock_i_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1447" NAME="data_i" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_data_i_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="data_i_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2895" NAME="data_o" RIGHT="0" SIGIS="undef" SIGNAME="stdz_181_0_data_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dense1_181x64_relu_0" PORT="data_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="data_valid_i" SIGIS="undef" SIGNAME="External_Ports_data_valid_i_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="data_valid_i_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="data_valid_o" SIGIS="undef" SIGNAME="stdz_181_0_data_valid_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dense1_181x64_relu_0" PORT="data_valid_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset_i" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_reset_i_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset_i_0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

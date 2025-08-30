@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../IA_IP.srcs/sources_1/new/dense_mac1_generic.sv" \
+"../../../../IA_IP.srcs/sources_1/new/dense_stage1.sv" \
+"../../../../IA_IP.srcs/sources_1/new/dense_stage2.sv" \
+"../../../../IA_IP.srcs/sources_1/new/dense_stage3.sv" \
+"../../../../IA_IP.srcs/sources_1/new/mlp_pipeline_top.sv" \
+"../../../../IA_IP.srcs/sources_1/new/pre_block_u8_to_s8.sv" \
+"../../../../IA_IP.srcs/sim_1/new/tb_mlp_pipeline_top.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

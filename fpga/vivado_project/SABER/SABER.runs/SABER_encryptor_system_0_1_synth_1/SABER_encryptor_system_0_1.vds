@@ -1,0 +1,472 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Thu Aug 21 20:49:21 2025
+# Process ID         : 43736
+# Current directory  : C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.runs/SABER_encryptor_system_0_1_synth_1
+# Command line       : vivado.exe -log SABER_encryptor_system_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source SABER_encryptor_system_0_1.tcl
+# Log file           : C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.runs/SABER_encryptor_system_0_1_synth_1/SABER_encryptor_system_0_1.vds
+# Journal file       : C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.runs/SABER_encryptor_system_0_1_synth_1\vivado.jou
+# Running On         : LAPTOP-TDIUQR79
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+# CPU Frequency      : 2419 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 21243 MB
+# Swap memory        : 21243 MB
+# Total Virtual      : 42486 MB
+# Available Virtual  : 18045 MB
+#-----------------------------------------------------------
+source SABER_encryptor_system_0_1.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 445.551 ; gain = 119.543
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IPs/encryptor_system'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IPs/reg_v3'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/IPs/ADC_8_bits'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programas/Vivado/2024.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: SABER_encryptor_system_0_1
+Command: synth_design -top SABER_encryptor_system_0_1 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 16832
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1160.434 ; gain = 468.340
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'SABER_encryptor_system_0_1' [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ip/SABER_encryptor_system_0_1/synth/SABER_encryptor_system_0_1.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'encryptor_system' [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/encryptor_system.sv:27]
+INFO: [Synth 8-6157] synthesizing module 'fsm_SABER' [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/fsm_SABER.sv:39]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/fsm_SABER.sv:136]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/fsm_SABER.sv:174]
+INFO: [Synth 8-6155] done synthesizing module 'fsm_SABER' (0#1) [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/fsm_SABER.sv:39]
+INFO: [Synth 8-6157] synthesizing module 'drive_ascon' [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/drive_ascon.sv:31]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/drive_ascon.sv:134]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/drive_ascon.sv:218]
+INFO: [Synth 8-6155] done synthesizing module 'drive_ascon' (0#1) [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/drive_ascon.sv:31]
+INFO: [Synth 8-6157] synthesizing module 'ascon' [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/ascon.sv:39]
+INFO: [Synth 8-6157] synthesizing module 'fsm_moore' [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/fsm_moore.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'fsm_moore' (0#1) [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/fsm_moore.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'compteur_double_init' [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/compteur_double_init.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'compteur_double_init' (0#1) [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/compteur_double_init.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'Permutation' [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/Permutation.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'mux_state' [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/mux_state.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'mux_state' (0#1) [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/mux_state.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'xor_begin_perm' [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/xor_begin_perm.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'xor_begin_perm' (0#1) [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/xor_begin_perm.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'register_w_en' [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/register_w_en.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'register_w_en' (0#1) [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/register_w_en.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'Pc' [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/Pc.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'Pc' (0#1) [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/Pc.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'Ps' [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/Ps.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'sbox' [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/Sbox.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'sbox' (0#1) [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/Sbox.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'Ps' (0#1) [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/Ps.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'Pl' [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/Pl.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'Pl' (0#1) [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/Pl.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'xor_end_perm' [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/xor_end_perm.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'xor_end_perm' (0#1) [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/xor_end_perm.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'state_register_w_en' [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/state_register_w_en.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'state_register_w_en' (0#1) [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/state_register_w_en.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'register_w_en__parameterized0' [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/register_w_en.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'register_w_en__parameterized0' (0#1) [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/register_w_en.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'Permutation' (0#1) [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/Permutation.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'ascon' (0#1) [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/ascon.sv:39]
+INFO: [Synth 8-6157] synthesizing module 'data_reg' [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/data_reg.sv:34]
+INFO: [Synth 8-6155] done synthesizing module 'data_reg' (0#1) [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/data_reg.sv:34]
+INFO: [Synth 8-6157] synthesizing module 'ad_reg' [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/ad_reg.sv:35]
+INFO: [Synth 8-6155] done synthesizing module 'ad_reg' (0#1) [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/ad_reg.sv:35]
+INFO: [Synth 8-6157] synthesizing module 'key_reg' [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/key_reg.sv:35]
+INFO: [Synth 8-6155] done synthesizing module 'key_reg' (0#1) [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/key_reg.sv:35]
+INFO: [Synth 8-6157] synthesizing module 'nonce_gen' [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/nonce_gen.sv:34]
+INFO: [Synth 8-6157] synthesizing module 'counter_128' [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/counter_128.sv:33]
+INFO: [Synth 8-6155] done synthesizing module 'counter_128' (0#1) [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/counter_128.sv:33]
+INFO: [Synth 8-6157] synthesizing module 'lfsr_128' [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/lfsr_128.sv:39]
+INFO: [Synth 8-6155] done synthesizing module 'lfsr_128' (0#1) [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/lfsr_128.sv:39]
+INFO: [Synth 8-6155] done synthesizing module 'nonce_gen' (0#1) [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/nonce_gen.sv:34]
+INFO: [Synth 8-6157] synthesizing module 'nonce_reg' [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/nonce_reg.sv:35]
+INFO: [Synth 8-6155] done synthesizing module 'nonce_reg' (0#1) [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/nonce_reg.sv:35]
+INFO: [Synth 8-6157] synthesizing module 'cipher_reg' [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/cipher_reg.sv:41]
+INFO: [Synth 8-6155] done synthesizing module 'cipher_reg' (0#1) [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/cipher_reg.sv:41]
+INFO: [Synth 8-6155] done synthesizing module 'encryptor_system' (0#1) [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ipshared/e8fc/src/encryptor_system.sv:27]
+INFO: [Synth 8-6155] done synthesizing module 'SABER_encryptor_system_0_1' (0#1) [c:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.gen/sources_1/bd/SABER/ip/SABER_encryptor_system_0_1/synth/SABER_encryptor_system_0_1.sv:53]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1294.395 ; gain = 602.301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1294.395 ; gain = 602.301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1294.395 ; gain = 602.301
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.098 . Memory (MB): peak = 1294.395 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1371.996 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.122 . Memory (MB): peak = 1372.926 ; gain = 0.930
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1372.926 ; gain = 680.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1372.926 ; gain = 680.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1372.926 ; gain = 680.832
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'fsm_SABER'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'drive_ascon'
+INFO: [Synth 8-802] inferred FSM for state register 'Ep_reg' in module 'fsm_moore'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 S_RESET |                         00000001 |                             0000
+               S_WAIT_GO |                         00000010 |                             0001
+             S_NONCE_GEN |                         00000100 |                             0010
+        S_LOAD_REGISTERS |                         00001000 |                             0011
+     S_START_DRIVE_ASCON |                         00010000 |                             0100
+       S_WAIT_ASCON_DONE |                         00100000 |                             0101
+                  S_WIFI |                         01000000 |                             0110
+        S_WAIT_WIFI_DONE |                         10000000 |                             0111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'fsm_SABER'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 S_RESET |               000000000000000001 |                            00000
+            S_WAIT_START |               000000000000000010 |                            00001
+                 S_START |               000000000000000100 |                            00010
+        S_WAIT_INIT_DONE |               000000000000001000 |                            00011
+                    S_AD |               000000000000010000 |                            00100
+          S_WAIT_AD_DONE |               000000000000100000 |                            00101
+       S_WAIT_DATA_READY |               000000000001000000 |                            00110
+               S_ENCRYPT |               000000000010000000 |                            00111
+      S_WAIT_CIPHER_DONE |               000000000100000000 |                            01000
+          S_STORE_CIPHER |               000000001000000000 |                            01001
+               S_ANALISE |               000000010000000000 |                            01010
+  S_WAIT_LAST_DATA_READY |               000000100000000000 |                            01011
+              S_FINALISE |               000001000000000000 |                            01100
+              S_WAIT_TAG |               000010000000000000 |                            01101
+             S_STORE_TAG |               000100000000000000 |                            01110
+              S_STORE_AD |               001000000000000000 |                            01111
+           S_STORE_NONCE |               010000000000000000 |                            10000
+                  S_DONE |               100000000000000000 |                            10001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'drive_ascon'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |       00000000000000000000000001 | 00000000000000000000000000000000
+               conf_init |       00000000000000000000000010 | 00000000000000000000000000000001
+              start_init |       00000000000000000000000100 | 00000000000000000000000000000010
+                    init |       00000000000000000000001000 | 00000000000000000000000000000011
+                end_init |       00000000000000000000010000 | 00000000000000000000000000000100
+               idle_next |       00000000000000000000100000 | 00000000000000000000000000000101
+                 conf_da |       00000000000000000001000000 | 00000000000000000000000000000111
+                start_da |       00000000000000000010000000 | 00000000000000000000000000001000
+                      da |       00000000000000000100000000 | 00000000000000000000000000001001
+                  end_da |       00000000000000001000000000 | 00000000000000000000000000001010
+                 idle_da |       00000000000000010000000000 | 00000000000000000000000000000110
+       conf_first_cipher |       00000000000000100000000000 | 00000000000000000000000000001011
+            first_cipher |       00000000000001000000000000 | 00000000000000000000000000001100
+             conf_cipher |       00000000000010000000000000 | 00000000000000000000000000001110
+            start_cipher |       00000000000100000000000000 | 00000000000000000000000000001111
+                cipherP0 |       00000000001000000000000000 | 00000000000000000000000000010000
+                  cipher |       00000000010000000000000000 | 00000000000000000000000000010001
+              end_cipher |       00000000100000000000000000 | 00000000000000000000000000010010
+             idle_cipher |       00000001000000000000000000 | 00000000000000000000000000001101
+                conf_tag |       00000010000000000000000000 | 00000000000000000000000000010011
+               start_tag |       00000100000000000000000000 | 00000000000000000000000000010100
+                   tagP0 |       00001000000000000000000000 | 00000000000000000000000000010101
+                     tag |       00010000000000000000000000 | 00000000000000000000000000010110
+                 end_tag |       00100000000000000000000000 | 00000000000000000000000000010111
+            wait_restart |       01000000000000000000000000 | 00000000000000000000000000011000
+            idle_restart |       10000000000000000000000000 | 00000000000000000000000000011001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Ep_reg' using encoding 'one-hot' in module 'fsm_moore'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1372.926 ; gain = 680.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   19 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 1     
++---XORs : 
+	   2 Input    128 Bit         XORs := 2     
+	   2 Input     64 Bit         XORs := 1     
+	   3 Input     64 Bit         XORs := 5     
+	   2 Input      8 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 1     
+	   4 Input      1 Bit         XORs := 128   
++---Registers : 
+	              128 Bit    Registers := 3     
+	               64 Bit    Registers := 9     
+	               32 Bit    Registers := 56    
+	               19 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input  128 Bit        Muxes := 2     
+	   2 Input   64 Bit        Muxes := 7     
+	   2 Input   32 Bit        Muxes := 10    
+	  26 Input   26 Bit        Muxes := 1     
+	   2 Input   26 Bit        Muxes := 13    
+	   2 Input   19 Bit        Muxes := 1     
+	  18 Input   18 Bit        Muxes := 1     
+	   2 Input   18 Bit        Muxes := 10    
+	   8 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 12    
+	  14 Input    1 Bit        Muxes := 2     
+	  26 Input    1 Bit        Muxes := 10    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1372.926 ; gain = 680.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++------------+------------------------------------------------+---------------+----------------+
+|Module Name | RTL Object                                     | Depth x Width | Implemented As | 
++------------+------------------------------------------------+---------------+----------------+
+|sbox        | sbox_o                                         | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[0].sbox_u/sbox_o  | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[1].sbox_u/sbox_o  | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[2].sbox_u/sbox_o  | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[3].sbox_u/sbox_o  | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[4].sbox_u/sbox_o  | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[5].sbox_u/sbox_o  | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[6].sbox_u/sbox_o  | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[7].sbox_u/sbox_o  | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[8].sbox_u/sbox_o  | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[9].sbox_u/sbox_o  | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[10].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[11].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[12].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[13].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[14].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[15].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[16].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[17].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[18].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[19].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[20].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[21].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[22].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[23].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[24].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[25].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[26].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[27].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[28].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[29].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[30].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[31].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[32].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[33].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[34].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[35].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[36].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[37].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[38].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[39].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[40].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[41].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[42].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[43].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[44].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[45].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[46].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[47].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[48].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[49].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[50].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[51].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[52].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[53].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[54].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[55].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[56].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[57].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[58].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[59].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[60].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[61].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[62].sbox_u/sbox_o | 32x5          | LUT            | 
+|ascon       | U3/Ps_instance/generate_sbox[63].sbox_u/sbox_o | 32x5          | LUT            | 
++------------+------------------------------------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 1488.957 ; gain = 796.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 1492.582 ; gain = 800.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:00:46 . Memory (MB): peak = 1503.930 ; gain = 811.836
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 1712.832 ; gain = 1020.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 1712.832 ; gain = 1020.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 1712.832 ; gain = 1020.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 1712.832 ; gain = 1020.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 1712.832 ; gain = 1020.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 1712.832 ; gain = 1020.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    37|
+|2     |LUT1   |     2|
+|3     |LUT2   |    67|
+|4     |LUT3   |   386|
+|5     |LUT4   |   270|
+|6     |LUT5   |   184|
+|7     |LUT6   |   341|
+|8     |FDCE   |  2718|
+|9     |FDPE   |     2|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 1712.832 ; gain = 1020.738
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:48 . Memory (MB): peak = 1712.832 ; gain = 942.207
+Synthesis Optimization Complete : Time (s): cpu = 00:00:48 ; elapsed = 00:00:52 . Memory (MB): peak = 1712.832 ; gain = 1020.738
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.082 . Memory (MB): peak = 1712.832 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 37 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1714.738 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 538b8b6d
+INFO: [Common 17-83] Releasing license: Synthesis
+83 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:00:59 . Memory (MB): peak = 1714.738 ; gain = 1246.871
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1714.738 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.runs/SABER_encryptor_system_0_1_synth_1/SABER_encryptor_system_0_1.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP SABER_encryptor_system_0_1, cache-ID = 0e5d6fb0da12ed80
+INFO: [Coretcl 2-1174] Renamed 17 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1714.738 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/cncai/Desktop/EMSE/AMD/Final_Files/SABER/SABER.runs/SABER_encryptor_system_0_1_synth_1/SABER_encryptor_system_0_1.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file SABER_encryptor_system_0_1_utilization_synth.rpt -pb SABER_encryptor_system_0_1_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Aug 21 20:50:35 2025...

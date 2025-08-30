@@ -1,27 +1,32 @@
-// app.js — LED de atividade + GO/STOP
+// app.js — LED de atividade + GO/STOP (com URLs absolutas via LiveFPGA)
 (() => {
-  window.addEventListener("DOMContentLoaded", () => {
-    const led = document.getElementById("status-led");
-    const blink = () => {
-      if (!led) return;
-      led.classList.add("on");
-      setTimeout(() => led.classList.remove("on"), 140);
-    };
+  function bindLed(){
+    const led = document.getElementById('status-led');
+    if (!led) return;
+    const blink = () => { led.classList.add('on'); setTimeout(() => led.classList.remove('on'), 140); };
+    window.addEventListener('ecg-frame', blink);
+  }
 
-    // sempre que o plot receber um bloco, pisca
-    const orig = window.ECG?.pushSamples?.bind(window.ECG);
-    if (orig) {
-      window.ECG.pushSamples = (...args) => { blink(); return orig(...args); };
-    }
+  function bindButtons(){
+    const btnGo   = document.getElementById('btn-go');
+    const btnStop = document.getElementById('btn-stop');
 
-    // GO/STOP (opcionais)
-    document.getElementById("btn-go")?.addEventListener("click", () => {
-      fetch("/api/fpga/go", { method: "POST" }).catch(()=>{});
-    });
-    document.getElementById("btn-stop")?.addEventListener("click", () => {
-      fetch("/api/fpga/stop", { method: "POST" }).catch(()=>{});
+    btnGo?.addEventListener('click', () => { window.LiveFPGA?.go(20); });
+    btnStop?.addEventListener('click', async () => {
+      await window.LiveFPGA?.stop();
       // limpa a tela imediatamente
-      if (window.ECG?.clear) window.ECG.clear();
+      window.ECG?.clear?.();
     });
+  }
+
+  // se o ECG já existir, conecta o LED; senão espera o evento
+  function hookWhenReady(){
+    if (window.ECG) return bindLed();
+    window.addEventListener('ecg-ready', bindLed, { once:true });
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    hookWhenReady();
+    bindButtons();
   });
 })();

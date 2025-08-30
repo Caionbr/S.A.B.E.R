@@ -1,4 +1,3 @@
-EN:
 # S.A.B.E.R. — Secure AI-Based Encrypted ECG Rhythm-monitoring
 
 ## Overview

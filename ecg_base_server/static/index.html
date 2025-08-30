@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     :root{
-      --bg: #ffffff;
-      --ink: #0f172a;
+      --bg: #b4d5f6;
+      --ink: #f3f3f3;
       --muted: #64748b;
       --border: #e5eaf0;
-      --brand: #0ea5e9;
+      --brand: #ffffff;
       --led-off: #cbd5e1;
       --led-on: #10b981;
     }
@@ -19,7 +19,7 @@
     header {
       display:flex; gap:14px; align-items:center;
       padding:14px 16px; border-bottom:1px solid var(--border);
-      background:#fff; position:sticky; top:0; z-index:10;
+      background: linear-gradient(160deg, #0ea5e9, #2563eb); position:sticky; top:0; z-index:10;
     }
     .brand { font-weight:900; letter-spacing:.06em; color:var(--brand); }
     .title { font-weight:700; color:var(--ink); opacity:.9; }
@@ -30,7 +30,7 @@
 
     .spacer { flex:1; }
     .btn {
-      background:#164bc6; color:#fff; border:1px solid #0f172a;
+      background:#0f03b5; color:#ffffff; border:1px solid #ffffff;
       padding:8px 12px; border-radius:8px; cursor:pointer; font-weight:600;
     }
     .btn:hover { filter:brightness(0.95); }
@@ -42,7 +42,7 @@
       width:100%;          /* ocupa 100% do main */
       height:360px;        /* altura visual; o JS usa esta altura */
       border:1px solid var(--border);
-      border-radius:10px; background:#fff; margin-top:8px;
+      border-radius:10px; background:#ffffff; margin-top:8px;
     }
   </style>
 </head>
@@ -61,8 +61,8 @@
     <canvas id="ecgCanvas" width="1200" height="360"></canvas>
   </main>
 
-  <script src="/static/js/ecg.js?v=12"></script>
-  <script src="/static/js/live.js?v=11"></script>
-  <script src="/static/js/app.js?v=11"></script>
+  <script src="/static/js/ecg.js?v=16"></script>
+  <script src="/static/js/live.js?v=16"></script>
+  <script src="/static/js/app.js?v=16"></script>
 </body>
 </html>

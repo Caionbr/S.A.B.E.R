@@ -33,7 +33,7 @@ The system includes a **web server** developed in Python (Flask + SocketIO), all
   - `STOP` stops and saves the last captured signal.  
 - **ECG Result**: a button that displays the stored ECG below, with full scrolling of the saved signal.  
 - **Clean visualization**: only the ECG signal is shown, without additional graphical artifacts.  
-- **Modular server**: optionally includes artificial intelligence analysis to classify the normality of heartbeats using trained models.  
+- **Modular server**: optionally includes artificial intelligence analysis to classify the normality of heartbeats using trained models;  
 
 ---
 
